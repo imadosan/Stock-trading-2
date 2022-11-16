@@ -1,8 +1,8 @@
 ﻿$(function () {
-    hentAlleAksjene();
+    hentAlleAksjer();
 });
 
-function hentAlleAksjene() {
+function hentAlleAksjer() {
     $.get("aksje/hentAlle", function (aksjer) {
         formaterAksjer(aksjer)
     });
@@ -15,12 +15,12 @@ function formaterAksjer(aksjer) {
         "</tr>";
     for (let aksje of aksjer) {
         ut += "<tr>" +
-            "<td>" + aksje.Navn + "</td>" +
-            "<td>" + aksje.Pris + "</td>" +
-            "<td>" + aksje.Antall + "</td>" +
+            "<td>" + aksje.navn + "</td>" +
+            "<td>" + aksje.pris + "</td>" +
+            "<td>" + aksje.antall + "</td>" +
             "</tr>";
     }
 
     ut += "</table>";
-    $("#akjene").html(ut);
+    $("#aksjene").html(ut);
 }
