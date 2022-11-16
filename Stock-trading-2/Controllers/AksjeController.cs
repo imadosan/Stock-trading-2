@@ -7,7 +7,7 @@ namespace Stock_trading_2.Controllers
     [Route("[controller]/[action]")]
     public class AksjeController : ControllerBase
     {
-        public List<Aksje> hentAlle()
+        public List<Aksje> HentAlle()
         {
             var aksjene = new List<Aksje>();
 
