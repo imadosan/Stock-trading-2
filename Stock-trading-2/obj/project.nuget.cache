@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5omx4q0Ts4zwK5SxX79zLkwulTkNvKD7twOCWNI4XUREf8q7qEhaPVm9OpYWMxaAm1hd3BNpgB6Qu/W+gM7ZUg==",
+  "dgSpecHash": "Qpgq/OwhNAFQknsy+W3zATrL22AINCCJWnZB4sMDrznDQc3lQVLJ3Z+9aa8v9F6K0SyxPyZQm6futT832+Wk/A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\imadf\\OneDrive - OsloMet\\University\\Web Application\\Stock-trading-2\\Stock-trading-2\\Stock-trading-2.csproj",
+  "projectFilePath": "C:\\Users\\imadf\\Documents\\Stock-trading-2\\Stock-trading-2\\Stock-trading-2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\imadf\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\imadf\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

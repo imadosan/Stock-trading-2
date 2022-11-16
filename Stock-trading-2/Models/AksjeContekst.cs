@@ -2,9 +2,9 @@
 
 namespace Stock_trading_2.Models
 {
-    public class AksjeDB : DbContext
+    public class AksjeContext : DbContext
     {
-        public AksjeDB(DbContextOptions<AksjeDB> options) : base(options) 
+        public AksjeContext(DbContextOptions<AksjeContext> options) : base(options) 
         {
             Database.EnsureCreated();
         }

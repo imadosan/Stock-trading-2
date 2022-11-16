@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\imadf\\OneDrive - OsloMet\\University\\Web Application\\Stock-trading-2\\Stock-trading-2\\Stock-trading-2.csproj": {}
+    "C:\\Users\\imadf\\Documents\\Stock-trading-2\\Stock-trading-2\\Stock-trading-2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\imadf\\OneDrive - OsloMet\\University\\Web Application\\Stock-trading-2\\Stock-trading-2\\Stock-trading-2.csproj": {
+    "C:\\Users\\imadf\\Documents\\Stock-trading-2\\Stock-trading-2\\Stock-trading-2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\imadf\\OneDrive - OsloMet\\University\\Web Application\\Stock-trading-2\\Stock-trading-2\\Stock-trading-2.csproj",
+        "projectUniqueName": "C:\\Users\\imadf\\Documents\\Stock-trading-2\\Stock-trading-2\\Stock-trading-2.csproj",
         "projectName": "Stock-trading-2",
-        "projectPath": "C:\\Users\\imadf\\OneDrive - OsloMet\\University\\Web Application\\Stock-trading-2\\Stock-trading-2\\Stock-trading-2.csproj",
+        "projectPath": "C:\\Users\\imadf\\Documents\\Stock-trading-2\\Stock-trading-2\\Stock-trading-2.csproj",
         "packagesPath": "C:\\Users\\imadf\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\imadf\\OneDrive - OsloMet\\University\\Web Application\\Stock-trading-2\\Stock-trading-2\\obj\\",
+        "outputPath": "C:\\Users\\imadf\\Documents\\Stock-trading-2\\Stock-trading-2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\imadf\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -19,7 +19,7 @@ namespace Stock_trading_2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<AksjeDB>(options => options.UseSqlite("Data source=Aksje.db"));
+            services.AddDbContext<AksjeContext>(options => options.UseSqlite("Data source=Aksje.db"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
