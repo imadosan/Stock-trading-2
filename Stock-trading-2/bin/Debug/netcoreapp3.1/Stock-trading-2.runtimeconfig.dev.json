@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\imadf\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\imadf\\.nuget\\packages"
+    ]
+  }
+}
