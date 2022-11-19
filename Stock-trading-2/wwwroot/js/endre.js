@@ -3,6 +3,8 @@
     const url = "Aksje/HentEn?" + id;
     $.get(url, function (aksje) {
         $("#id").val(aksje.id);
+        $("#fornavn").val(aksje.fornavn);
+        $("#etternavn").val(aksje.etternavn);
         $("#navn").val(aksje.navn);
         $("#pris").val(aksje.pris);
         $("#antall").val(aksje.antall);
@@ -12,6 +14,8 @@
 function endreAksje() {
     const aksje = {
         id: $("#id").val(),
+        fornavn: $("#fornavn").val(),
+        etternavn: $("#etternavn").val(),
         navn: $("#navn").val(),
         pris: $("#pris").val(),
         antall: $("#antall").val()

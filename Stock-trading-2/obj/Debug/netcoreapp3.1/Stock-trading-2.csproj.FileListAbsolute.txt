@@ -126,3 +126,5 @@ C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2\obj\Debug\netcoreapp3.1
 C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2\obj\Debug\netcoreapp3.1\Stock-trading-2.dll
 C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2\obj\Debug\netcoreapp3.1\Stock-trading-2.pdb
 C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2\obj\Debug\netcoreapp3.1\Stock-trading-2.genruntimeconfig.cache
+C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll

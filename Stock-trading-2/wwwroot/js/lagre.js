@@ -1,5 +1,7 @@
 ﻿function lagreAksje() {
     const aksje = {
+        fornavn: $("#fornavn").val(),
+        etternavn: $("#etternavn").val(),
         navn: $("#navn").val(),
         pris: $("#pris").val(),
         antall: $("#antall").val()

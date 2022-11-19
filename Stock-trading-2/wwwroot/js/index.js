@@ -11,10 +11,12 @@ function hentAlleAksjer() {
 function formaterAksjer(aksjer) {
     let ut = "<table class='table table-striped'>" +
         "<tr>" +
-        "<th>Navn</th><th>Pris</th><th>Antall</th><th></th><th></th>" +
+        "<th>Fornavn</th><th>Etternavn</th><th>Navn</th><th>Markedspris</th><th>Antall</th><th></th><th></th>" +
         "</tr>";
-    for (let aksje of aksjer) {
+    for (let i = 0; i < aksjer; i++) {
         ut += "<tr>" +
+            "<td>" + aksje.fornavn + "</td>" +
+            "<td>" + aksje.etternavn + "</td>" +
             "<td>" + aksje.navn + "</td>" +
             "<td>" + aksje.pris + "</td>" +
             "<td>" + aksje.antall + "</td>" +

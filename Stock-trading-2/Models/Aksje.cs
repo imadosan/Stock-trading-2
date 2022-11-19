@@ -4,7 +4,9 @@
     {
         public int id { get; set; }
         public string navn { get; set; }
-        public int pris { get; set; }
+        public double pris { get; set; }
         public int antall { get; set; }
+        public string fornavn { get; set; }
+        public string etternavn { get; set; }
     }
 }
