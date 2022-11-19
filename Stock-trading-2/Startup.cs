@@ -28,6 +28,7 @@ namespace Stock_trading_2
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                DBInit.Initialize(app);
             }
 
             app.UseRouting();

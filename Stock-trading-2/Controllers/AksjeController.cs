@@ -24,16 +24,16 @@ namespace Stock_trading_2.Controllers
             try
             {
                 var nyAksjeRad = new Aksjer();
-                nyAksjeRad.navn = innAksje.navn;
-                nyAksjeRad.pris = innAksje.pris;
-                nyAksjeRad.antall = innAksje.antall;
+                nyAksjeRad.Navn = innAksje.Navn;
+                nyAksjeRad.Pris = innAksje.Pris;
+                nyAksjeRad.Antall = innAksje.Antall;
 
-                var sjekkPerson = await _db.Personer.FindAsync(innAksje.fornavn);
+                var sjekkPerson = await _db.Personer.FindAsync(innAksje.Fornavn);
                 if (sjekkPerson == null)
                 {
                     var nyPersonRad = new Personer();
-                    nyPersonRad.fornavn = innAksje.fornavn;
-                    nyPersonRad.etternavn = innAksje.etternavn;
+                    nyPersonRad.Fornavn = innAksje.Fornavn;
+                    nyPersonRad.Etternavn = innAksje.Etternavn;
                     nyAksjeRad.Person = nyPersonRad;
                 }
                 else
@@ -56,12 +56,12 @@ namespace Stock_trading_2.Controllers
             {
                 List<Aksje> alleAksjer = await _db.Aksjer.Select(k => new Aksje
                 {
-                    id = k.id,
-                    navn = k.navn,
-                    pris = k.pris,
-                    antall = k.antall,
-                    fornavn = k.Person.fornavn,
-                    etternavn= k.Person.etternavn,
+                    Id = k.Id,
+                    Navn = k.Navn,
+                    Pris = k.Pris,
+                    Antall = k.Antall,
+                    Fornavn = k.Person.Fornavn,
+                    Etternavn= k.Person.Etternavn,
                 }).ToListAsync();
                 return alleAksjer;
             } catch
@@ -92,12 +92,12 @@ namespace Stock_trading_2.Controllers
                 Aksjer enAksje = await _db.Aksjer.FindAsync(id);
                 var hentetAksje = new Aksje()
                 {
-                    id = enAksje.id,
-                    navn = enAksje.navn,
-                    pris = enAksje.pris,
-                    antall = enAksje.antall,
-                    fornavn = enAksje.Person.fornavn,
-                    etternavn = enAksje.Person.etternavn,
+                    Id = enAksje.Id,
+                    Navn = enAksje.Navn,
+                    Pris = enAksje.Pris,
+                    Antall = enAksje.Antall,
+                    Fornavn = enAksje.Person.Fornavn,
+                    Etternavn = enAksje.Person.Etternavn,
                 };
                 return hentetAksje;
             }
@@ -111,16 +111,16 @@ namespace Stock_trading_2.Controllers
         {
             try
             {
-                Aksjer enAksje = await _db.Aksjer.FindAsync(endreAksje.id);
+                Aksjer enAksje = await _db.Aksjer.FindAsync(endreAksje.Id);
 
-                if (enAksje.Person.fornavn != endreAksje.fornavn)
+                if (enAksje.Person.Fornavn != endreAksje.Fornavn)
                 {
-                    var sjekkPerson = _db.Personer.Find(endreAksje.fornavn);
+                    var sjekkPerson = _db.Personer.Find(endreAksje.Fornavn);
                     if (sjekkPerson == null)
                     {
                         var nyPersonRad = new Personer();
-                        nyPersonRad.fornavn = endreAksje.fornavn;
-                        nyPersonRad.etternavn = endreAksje.etternavn;
+                        nyPersonRad.Fornavn = endreAksje.Fornavn;
+                        nyPersonRad.Etternavn = endreAksje.Etternavn;
                         enAksje.Person = nyPersonRad;
                     }
                     else
@@ -129,9 +129,9 @@ namespace Stock_trading_2.Controllers
                     }
                 }
 
-                enAksje.navn = endreAksje.navn;
-                enAksje.pris = endreAksje.pris;
-                enAksje.antall = endreAksje.antall;
+                enAksje.Navn = endreAksje.Navn;
+                enAksje.Pris = endreAksje.Pris;
+                enAksje.Antall = endreAksje.Antall;
                 await _db.SaveChangesAsync();
                 return true;
             }

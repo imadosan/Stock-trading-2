@@ -13,7 +13,7 @@ function formaterAksjer(aksjer) {
         "<tr>" +
         "<th>Fornavn</th><th>Etternavn</th><th>Navn</th><th>Markedspris</th><th>Antall</th><th></th><th></th>" +
         "</tr>";
-    for (let i = 0; i < aksjer; i++) {
+    for (let aksje of aksjer) {
         ut += "<tr>" +
             "<td>" + aksje.fornavn + "</td>" +
             "<td>" + aksje.etternavn + "</td>" +
