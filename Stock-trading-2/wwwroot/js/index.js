@@ -21,7 +21,7 @@ function formaterAksjer(aksjer) {
             "<td>" + aksje.pris + "</td>" +
             "<td>" + aksje.antall + "</td>" +
             "<td> <a class='btn btn-primary' href='endre.html?id="+aksje.id+"'>Endre</a></td>" +
-            "<td> <button class='btn btn-danger' onclick='slettAksje("+aksje.id+")'>Slett</button></td>" +
+            "<td> <button class='btn btn-danger' onclick='slettAksje("+aksje.id+")'>Selg</button></td>" +
             "</tr>";
     }
 
