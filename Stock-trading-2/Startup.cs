@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Stock_trading_2.Models;
+using Stock_trading_2.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +20,7 @@ namespace Stock_trading_2
         {
             services.AddControllers();
             services.AddDbContext<AksjeContext>(options => options.UseSqlite("Data source=Aksje.db"));
+            services.AddScoped<IAksjeRepository, AksjeRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

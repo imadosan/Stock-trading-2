@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Stock_trading_2.Models
+namespace Stock_trading_2.DAL
 {
     public class Aksjer
     {
@@ -10,7 +10,7 @@ namespace Stock_trading_2.Models
         public string Navn { get; set; }
         public double Pris { get; set; }
         public int Antall { get; set; }
-      
+
         virtual public Personer Person { get; set; }
     }
 
@@ -25,7 +25,7 @@ namespace Stock_trading_2.Models
 
     public class AksjeContext : DbContext
     {
-        public AksjeContext(DbContextOptions<AksjeContext> options) : base(options) 
+        public AksjeContext(DbContextOptions<AksjeContext> options) : base(options)
         {
             Database.EnsureCreated();
         }

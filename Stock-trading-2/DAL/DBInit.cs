@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Stock_trading_2.Models
+namespace Stock_trading_2.DAL
 {
     public class DBInit
     {
-        public static void Initialize (IApplicationBuilder app) 
+        public static void Initialize(IApplicationBuilder app)
         {
             using (var serviceScope = app.ApplicationServices.CreateScope())
             {
