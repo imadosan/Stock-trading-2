@@ -1,6 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Stock_trading_2.Models;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -10,10 +13,13 @@ namespace Stock_trading_2.DAL
     {
         private readonly AksjeContext _db;
 
+        private ILogger<AksjeRepository> _log;
 
-        public AksjeRepository(AksjeContext db)
+
+        public AksjeRepository(AksjeContext db, ILogger<AksjeRepository> log)
         {
             _db = db;
+            _log = log;
         }
 
         public async Task<bool> Lagre(Aksje innAksje)
@@ -41,8 +47,9 @@ namespace Stock_trading_2.DAL
                 await _db.SaveChangesAsync();
                 return true;
             }
-            catch
+            catch (Exception e)
             {
+                _log.LogInformation(e.Message);
                 return false;
             }
         }
@@ -62,8 +69,9 @@ namespace Stock_trading_2.DAL
                 }).ToListAsync();
                 return alleAksjer;
             }
-            catch
+            catch(Exception e)
             {
+                _log.LogInformation(e.Message);
                 return null;
             }
         }
@@ -77,8 +85,9 @@ namespace Stock_trading_2.DAL
                 await _db.SaveChangesAsync();
                 return true;
             }
-            catch
+            catch (Exception e)
             {
+                _log.LogInformation(e.Message);
                 return false;
             }
         }
@@ -99,8 +108,9 @@ namespace Stock_trading_2.DAL
                 };
                 return hentetAksje;
             }
-            catch
+            catch (Exception e)
             {
+                _log.LogInformation(e.Message);
                 return null;
             }
         }
@@ -109,9 +119,9 @@ namespace Stock_trading_2.DAL
         {
             try
             {
-                Aksjer enAksje = await _db.Aksjer.FindAsync(endreAksje.Id);
+                var endreObjekt = await _db.Aksjer.FindAsync(endreAksje.Id);
 
-                if (enAksje.Person.Fornavn != endreAksje.Fornavn)
+                if (endreObjekt.Person.Fornavn != endreAksje.Fornavn)
                 {
                     var sjekkPerson = _db.Personer.Find(endreAksje.Fornavn);
                     if (sjekkPerson == null)
@@ -119,24 +129,25 @@ namespace Stock_trading_2.DAL
                         var nyPersonRad = new Personer();
                         nyPersonRad.Fornavn = endreAksje.Fornavn;
                         nyPersonRad.Etternavn = endreAksje.Etternavn;
-                        enAksje.Person = nyPersonRad;
+                        endreObjekt.Person = nyPersonRad;
                     }
                     else
                     {
-                        enAksje.Person = sjekkPerson;
+                        endreObjekt.Person = sjekkPerson;
                     }
                 }
 
-                enAksje.Navn = endreAksje.Aksjenavn;
-                enAksje.Pris = endreAksje.Pris;
-                enAksje.Antall = endreAksje.Antall;
+                endreObjekt.Navn = endreAksje.Aksjenavn;
+                endreObjekt.Pris = endreAksje.Pris;
+                endreObjekt.Antall = endreAksje.Antall;
                 await _db.SaveChangesAsync();
-                return true;
             }
-            catch
+            catch (Exception e)
             {
+                _log.LogInformation(e.Message);
                 return false;
             }
+            return true;
         }
     }
 }

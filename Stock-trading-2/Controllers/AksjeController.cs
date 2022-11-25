@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Stock_trading_2.DAL;
 using Stock_trading_2.Models;
 using System.Collections.Generic;
@@ -14,34 +15,62 @@ namespace Stock_trading_2.Controllers
     public class AksjeController : ControllerBase
     {
         private readonly IAksjeRepository _db;
-        public AksjeController(IAksjeRepository db)
+
+        private ILogger<AksjeController> _log;
+        public AksjeController(IAksjeRepository db, ILogger<AksjeController> log)
         {
             _db = db;
+            _log = log;
         }
 
-        public async Task<bool> Lagre(Aksje innAksje)
+        public async Task<ActionResult> Lagre(Aksje innAksje)
         {
-            return await _db.Lagre(innAksje);
+            bool returOK = await _db.Lagre(innAksje);
+            if (!returOK)
+            {
+                _log.LogInformation("Aksje ble ikke lagret!");
+                return BadRequest("Aksje ble ikke lagret!");
+            }
+            return Ok("Aksje lagret!");
         }
 
-        public async Task<List<Aksje>> HentAlle()
+        public async Task<ActionResult> HentAlle()
         {
-            return await _db.HentAlle();
+            List<Aksje> alleAksjer = await _db.HentAlle();
+            return Ok(alleAksjer);
         }
 
-        public async Task<bool> Slett(int id)
+        public async Task<ActionResult> Slett(int id)
         {
-            return await _db.Slett(id);
+            bool returOK = await _db.Slett(id);
+            if (!returOK)
+            {
+                _log.LogInformation("Aksje ble ikke slettet!");
+                return NotFound("Aksje ble ikke slettet!");
+            }
+            return Ok("Aksje slettet!");
         }
 
-        public async Task<Aksje> HentEn(int id)
+        public async Task<ActionResult> HentEn(int id)
         {
-            return await _db.HentEn(id);
+            Aksje enAksje = await _db.HentEn(id);
+            if (enAksje == null)
+            {
+                _log.LogInformation("Fant ikke aksjen!");
+                return NotFound("Fant ikke aksjen!");
+            }
+            return Ok(enAksje);
         }
 
-        public async Task<bool> Endre(Aksje endreAksje)
+        public async Task<ActionResult> Endre(Aksje endreAksje)
         {
-            return await _db.Endre(endreAksje);
+            bool returOK = await _db.Endre(endreAksje);
+            if (!returOK)
+            {
+                _log.LogInformation("Aksje ble ikke endret!");
+                return NotFound("Aksje ble ikke endret!");
+            }
+            return Ok("Aksje endret!");
         }
     }
 }

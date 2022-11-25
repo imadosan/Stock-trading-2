@@ -8,12 +8,10 @@
     }
 
     const url = "Aksje/Lagre";
-    $.post(url, aksje, function (OK) {
-        if (OK) {
-            window.location.href = 'index.html'
-        }
-        else {
-            $("#feil").html("Feil i DB - Prøv igjen senere!")
-        }
+    $.post(url, aksje, function () {
+        window.location.href = 'index.html';
     })
+        .fail(function () {
+            $("#feil").html("Feil på server - prøv igjen senere");
+        });
 }

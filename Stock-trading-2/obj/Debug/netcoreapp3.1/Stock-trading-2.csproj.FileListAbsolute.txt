@@ -128,3 +128,10 @@ C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2\obj\Debug\netcoreapp3.1
 C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2\obj\Debug\netcoreapp3.1\Stock-trading-2.genruntimeconfig.cache
 C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2\bin\Debug\netcoreapp3.1\Castle.Core.dll
 C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2\bin\Debug\netcoreapp3.1\Serilog.dll
+C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.dll
+C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.File.dll
+C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2\bin\Debug\netcoreapp3.1\Serilog.Formatting.Compact.dll
+C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2\bin\Debug\netcoreapp3.1\Serilog.Sinks.Async.dll
+C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2\bin\Debug\netcoreapp3.1\Serilog.Sinks.RollingFile.dll
