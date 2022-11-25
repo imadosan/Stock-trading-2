@@ -3,7 +3,7 @@
     public class Aksje
     {
         public int Id { get; set; }
-        public string Navn { get; set; }
+        public string Aksjenavn { get; set; }
         public double Pris { get; set; }
         public int Antall { get; set; }
         public string Fornavn { get; set; }

@@ -21,7 +21,7 @@ namespace Stock_trading_2.DAL
             try
             {
                 var nyAksjeRad = new Aksjer();
-                nyAksjeRad.Navn = innAksje.Navn;
+                nyAksjeRad.Navn = innAksje.Aksjenavn;
                 nyAksjeRad.Pris = innAksje.Pris;
                 nyAksjeRad.Antall = innAksje.Antall;
 
@@ -54,7 +54,7 @@ namespace Stock_trading_2.DAL
                 List<Aksje> alleAksjer = await _db.Aksjer.Select(k => new Aksje
                 {
                     Id = k.Id,
-                    Navn = k.Navn,
+                    Aksjenavn = k.Navn,
                     Pris = k.Pris,
                     Antall = k.Antall,
                     Fornavn = k.Person.Fornavn,
@@ -91,7 +91,7 @@ namespace Stock_trading_2.DAL
                 var hentetAksje = new Aksje()
                 {
                     Id = enAksje.Id,
-                    Navn = enAksje.Navn,
+                    Aksjenavn = enAksje.Navn,
                     Pris = enAksje.Pris,
                     Antall = enAksje.Antall,
                     Fornavn = enAksje.Person.Fornavn,
@@ -127,7 +127,7 @@ namespace Stock_trading_2.DAL
                     }
                 }
 
-                enAksje.Navn = endreAksje.Navn;
+                enAksje.Navn = endreAksje.Aksjenavn;
                 enAksje.Pris = endreAksje.Pris;
                 enAksje.Antall = endreAksje.Antall;
                 await _db.SaveChangesAsync();

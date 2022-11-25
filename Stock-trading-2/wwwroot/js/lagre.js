@@ -2,7 +2,7 @@
     const aksje = {
         fornavn: $("#fornavn").val(),
         etternavn: $("#etternavn").val(),
-        navn: $("#navn").val(),
+        aksjeNavn: $("#aksjeNavn").val(),
         pris: $("#pris").val(),
         antall: $("#antall").val()
     }

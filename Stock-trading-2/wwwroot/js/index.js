@@ -11,13 +11,13 @@ function hentAlleAksjer() {
 function formaterAksjer(aksjer) {
     let ut = "<table class='table table-striped'>" +
         "<tr>" +
-        "<th>Fornavn</th><th>Etternavn</th><th>Navn</th><th>Markedspris</th><th>Antall</th><th></th><th></th>" +
+        "<th>Fornavn</th><th>Etternavn</th><th>Aksje</th><th>Markedspris</th><th>Antall</th><th></th><th></th>" +
         "</tr>";
     for (let aksje of aksjer) {
         ut += "<tr>" +
             "<td>" + aksje.fornavn + "</td>" +
             "<td>" + aksje.etternavn + "</td>" +
-            "<td>" + aksje.navn + "</td>" +
+            "<td>" + aksje.aksjenavn + "</td>" +
             "<td>" + aksje.pris + "</td>" +
             "<td>" + aksje.antall + "</td>" +
             "<td> <a class='btn btn-primary' href='endre.html?id="+aksje.id+"'>Endre</a></td>" +

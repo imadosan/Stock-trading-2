@@ -5,7 +5,7 @@
         $("#id").val(aksje.id);
         $("#fornavn").val(aksje.fornavn);
         $("#etternavn").val(aksje.etternavn);
-        $("#navn").val(aksje.navn);
+        $("#aksjeNavn").val(aksje.aksjenavn);
         $("#pris").val(aksje.pris);
         $("#antall").val(aksje.antall);
     });
@@ -16,7 +16,7 @@ function endreAksje() {
         id: $("#id").val(),
         fornavn: $("#fornavn").val(),
         etternavn: $("#etternavn").val(),
-        navn: $("#navn").val(),
+        aksjeNavn: $("#aksjeNavn").val(),
         pris: $("#pris").val(),
         antall: $("#antall").val()
     }
