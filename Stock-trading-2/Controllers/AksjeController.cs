@@ -25,13 +25,19 @@ namespace Stock_trading_2.Controllers
 
         public async Task<ActionResult> Lagre(Aksje innAksje)
         {
-            bool returOK = await _db.Lagre(innAksje);
-            if (!returOK)
+            if(ModelState.IsValid) 
             {
-                _log.LogInformation("Aksje ble ikke lagret!");
-                return BadRequest("Aksje ble ikke lagret!");
+                bool returOK = await _db.Lagre(innAksje);
+                if (!returOK)
+                {
+                    _log.LogInformation("Aksje ble ikke lagret!");
+                    return BadRequest("Aksje ble ikke lagret!");
+                }
+                return Ok("Aksje lagret!");
             }
-            return Ok("Aksje lagret!");
+            _log.LogInformation("Feil i inputvalidering!");
+            return BadRequest("Feil i inputvalidering!");
+
         }
 
         public async Task<ActionResult> HentAlle()
@@ -64,13 +70,18 @@ namespace Stock_trading_2.Controllers
 
         public async Task<ActionResult> Endre(Aksje endreAksje)
         {
-            bool returOK = await _db.Endre(endreAksje);
-            if (!returOK)
+            if(ModelState.IsValid) 
             {
-                _log.LogInformation("Aksje ble ikke endret!");
-                return NotFound("Aksje ble ikke endret!");
+                bool returOK = await _db.Endre(endreAksje);
+                if (!returOK)
+                {
+                    _log.LogInformation("Aksje ble ikke endret!");
+                    return NotFound("Aksje ble ikke endret!");
+                }
+                return Ok("Aksje endret!");
             }
-            return Ok("Aksje endret!");
+            _log.LogInformation("Feil i inputvalidering!");
+            return BadRequest("Feil i inputvalidering!");
         }
     }
 }

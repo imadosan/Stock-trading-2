@@ -11,6 +11,17 @@
     });
 });
 
+function validerOgEndreAksje() {
+    const fornavnOK = validerFornavn($("#fornavn").val());
+    const etternavnOK = validerEtternavn($("#etternavn").val());
+    const aksjenavnOK = validerAksjeNavn($("#aksjeNavn").val());
+    const prisOK = validerPris($("#pris").val());
+    const antallOK = validerAntall($("#antall").val());
+    if (fornavnOK && etternavnOK && aksjenavnOK && prisOK && antallOK) {
+        endreAksje();
+    }
+}
+
 function endreAksje() {
     const aksje = {
         id: $("#id").val(),

@@ -1,4 +1,15 @@
-﻿function lagreAksje() {
+﻿function validerOgLagreAksje() {
+    const fornavnOK = validerFornavn($("#fornavn").val());
+    const etternavnOK = validerEtternavn($("#etternavn").val());
+    const aksjenavnOK = validerAksjeNavn($("#aksjeNavn").val());
+    const prisOK = validerPris($("#pris").val());
+    const antallOK = validerAntall($("#antall").val());
+    if (fornavnOK && etternavnOK && aksjenavnOK && prisOK && antallOK) {
+        lagreAksje();
+    }
+}
+
+function lagreAksje() {
     const aksje = {
         fornavn: $("#fornavn").val(),
         etternavn: $("#etternavn").val(),
