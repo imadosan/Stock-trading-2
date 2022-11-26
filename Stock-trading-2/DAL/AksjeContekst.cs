@@ -22,6 +22,13 @@ namespace Stock_trading_2.DAL
         public string Etternavn { get; set; }
     }
 
+    public class Brukere
+    {
+        public int Id { get; set; }
+        public string Brukernavn { get; set; }
+        public byte[] Passord { get; set; }
+        public byte[] Salt { get; set; }
+    }
 
     public class AksjeContext : DbContext
     {
@@ -32,6 +39,7 @@ namespace Stock_trading_2.DAL
 
         public DbSet<Aksjer> Aksjer { get; set; }
         public DbSet<Personer> Personer { get; set; }
+        public DbSet<Brukere> Brukere { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

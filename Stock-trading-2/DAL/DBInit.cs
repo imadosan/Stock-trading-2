@@ -9,10 +9,10 @@ namespace Stock_trading_2.DAL
         {
             using (var serviceScope = app.ApplicationServices.CreateScope())
             {
-                var context = serviceScope.ServiceProvider.GetService<AksjeContext>();
+                var db = serviceScope.ServiceProvider.GetService<AksjeContext>();
 
-                context.Database.EnsureDeleted();
-                context.Database.EnsureCreated();
+                db.Database.EnsureDeleted();
+                db.Database.EnsureCreated();
 
                 var person1 = new Personer { Fornavn = "Ole", Etternavn = "Hansen" };
                 var person2 = new Personer { Fornavn = "Line", Etternavn = "Jensen" };
@@ -20,10 +20,20 @@ namespace Stock_trading_2.DAL
                 var aksje1 = new Aksjer { Navn = "Apple", Pris = 151.29, Antall = 2, Person = person1 };
                 var aksje2 = new Aksjer { Navn = "Meta", Pris = 112.05, Antall = 3, Person = person2 };
 
-                context.Aksjer.Add(aksje1);
-                context.Aksjer.Add(aksje2);
+                db.Aksjer.Add(aksje1);
+                db.Aksjer.Add(aksje2);
 
-                context.SaveChanges();
+                // lag en påoggingsbruker
+                var bruker = new Brukere();
+                bruker.Brukernavn = "Admin";
+                string passord = "Test11";
+                byte[] salt = AksjeRepository.LagSalt();
+                byte[] hash = AksjeRepository.LagHash(passord, salt);
+                bruker.Passord = hash;
+                bruker.Salt = salt;
+                db.Brukere.Add(bruker);
+
+                db.SaveChanges();
             }
         }
     }
