@@ -20,6 +20,8 @@ namespace Stock_trading_2.Controllers
         private ILogger<AksjeController> _log;
 
         private const string _loggetInn = "loggetInn";
+        private const string _ikkeLoggetInn = "";
+
         public AksjeController(IAksjeRepository db, ILogger<AksjeController> log)
         {
             _db = db;
@@ -30,7 +32,7 @@ namespace Stock_trading_2.Controllers
         {
             if (string.IsNullOrEmpty(HttpContext.Session.GetString(_loggetInn)))
             {
-                return Unauthorized();
+                return Unauthorized("Ikke logget inn");
             }
             if(ModelState.IsValid) 
             {
@@ -51,7 +53,7 @@ namespace Stock_trading_2.Controllers
         {
             if (string.IsNullOrEmpty(HttpContext.Session.GetString(_loggetInn)))
             {
-                return Unauthorized();
+                return Unauthorized("Ikke logget inn");
             }
             List<Aksje> alleAksjer = await _db.HentAlle();
             return Ok(alleAksjer);
@@ -61,7 +63,7 @@ namespace Stock_trading_2.Controllers
         {
             if (string.IsNullOrEmpty(HttpContext.Session.GetString(_loggetInn)))
             {
-                return Unauthorized();
+                return Unauthorized("Ikke logget inn");
             }
             bool returOK = await _db.Slett(id);
             if (!returOK)
@@ -76,7 +78,7 @@ namespace Stock_trading_2.Controllers
         {
             if (string.IsNullOrEmpty(HttpContext.Session.GetString(_loggetInn)))
             {
-                return Unauthorized();
+                return Unauthorized("Ikke logget inn");
             }
             Aksje enAksje = await _db.HentEn(id);
             if (enAksje == null)
@@ -91,7 +93,7 @@ namespace Stock_trading_2.Controllers
         {
             if (string.IsNullOrEmpty(HttpContext.Session.GetString(_loggetInn)))
             {
-                return Unauthorized();
+                return Unauthorized("Ikke logget inn");
             }
             if(ModelState.IsValid) 
             {
@@ -114,11 +116,11 @@ namespace Stock_trading_2.Controllers
                 bool returnOK = await _db.LoggInn(bruker);
                 if (!returnOK)
                 {
-                    _log.LogInformation("Innloggingen feilet for bruker" + bruker.Brukernavn);
-                    HttpContext.Session.SetString(_loggetInn, "");
+                    _log.LogInformation("Innloggingen feilet for bruker");
+                    HttpContext.Session.SetString(_loggetInn, _ikkeLoggetInn);
                     return Ok(false);
                 }
-                HttpContext.Session.SetString(_loggetInn, "LoggetInn");
+                HttpContext.Session.SetString(_loggetInn, _loggetInn);
                 return Ok(true);
             }
             _log.LogInformation("Feil i inputvalidering!");
@@ -127,7 +129,7 @@ namespace Stock_trading_2.Controllers
 
         public void LoggUt()
         {
-            HttpContext.Session.SetString(_loggetInn, "");
+            HttpContext.Session.SetString(_loggetInn, _ikkeLoggetInn);
         }
     }
 }
