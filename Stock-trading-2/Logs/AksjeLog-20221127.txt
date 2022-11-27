@@ -133,3 +133,165 @@ File name: 'Microsoft.WebTools.BrowserLink.Net, Culture=neutral, PublicKeyToken=
 2022-11-27T15:11:23.7236835+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
 2022-11-27T15:11:23.7308189+01:00  [INF] Hosting environment: "Development" (c3307c92)
 2022-11-27T15:11:23.7323081+01:00  [INF] Content root path: "C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2" (b5d60022)
+2022-11-27T15:23:16.2238788+01:00  [FTL] Hosting startup assembly exception (37a7eec1)
+System.InvalidOperationException: Startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh failed to execute. See the inner exception for more details.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.AspNetCore.Watch.BrowserRefresh, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'Microsoft.AspNetCore.Watch.BrowserRefresh, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.ExecuteHostingStartups()
+
+
+   --- End of inner exception stack trace ---
+2022-11-27T15:23:16.2319165+01:00  [FTL] Hosting startup assembly exception (37a7eec1)
+System.InvalidOperationException: Startup assembly Microsoft.WebTools.BrowserLink.Net failed to execute. See the inner exception for more details.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.WebTools.BrowserLink.Net, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'Microsoft.WebTools.BrowserLink.Net, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.ExecuteHostingStartups()
+
+
+   --- End of inner exception stack trace ---
+2022-11-27T15:23:16.2336341+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-27T15:23:16.2359079+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-27T15:23:16.2373408+01:00  [INF] Content root path: "C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2" (b5d60022)
+2022-11-27T15:35:27.8590734+01:00  [FTL] Hosting startup assembly exception (37a7eec1)
+System.InvalidOperationException: Startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh failed to execute. See the inner exception for more details.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.AspNetCore.Watch.BrowserRefresh, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'Microsoft.AspNetCore.Watch.BrowserRefresh, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.ExecuteHostingStartups()
+
+
+   --- End of inner exception stack trace ---
+2022-11-27T15:35:27.8684322+01:00  [FTL] Hosting startup assembly exception (37a7eec1)
+System.InvalidOperationException: Startup assembly Microsoft.WebTools.BrowserLink.Net failed to execute. See the inner exception for more details.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.WebTools.BrowserLink.Net, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'Microsoft.WebTools.BrowserLink.Net, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.ExecuteHostingStartups()
+
+
+   --- End of inner exception stack trace ---
+2022-11-27T15:35:27.8704811+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-27T15:35:27.8730050+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-27T15:35:27.8745260+01:00  [INF] Content root path: "C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2" (b5d60022)
+2022-11-27T15:38:40.2818769+01:00  [FTL] Hosting startup assembly exception (37a7eec1)
+System.InvalidOperationException: Startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh failed to execute. See the inner exception for more details.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.AspNetCore.Watch.BrowserRefresh, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'Microsoft.AspNetCore.Watch.BrowserRefresh, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.ExecuteHostingStartups()
+
+
+   --- End of inner exception stack trace ---
+2022-11-27T15:38:40.2895431+01:00  [FTL] Hosting startup assembly exception (37a7eec1)
+System.InvalidOperationException: Startup assembly Microsoft.WebTools.BrowserLink.Net failed to execute. See the inner exception for more details.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.WebTools.BrowserLink.Net, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'Microsoft.WebTools.BrowserLink.Net, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.ExecuteHostingStartups()
+
+
+   --- End of inner exception stack trace ---
+2022-11-27T15:38:40.2916345+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-27T15:38:40.2937544+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-27T15:38:40.2951808+01:00  [INF] Content root path: "C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2" (b5d60022)
+2022-11-27T15:43:54.8107565+01:00  [FTL] Hosting startup assembly exception (37a7eec1)
+System.InvalidOperationException: Startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh failed to execute. See the inner exception for more details.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.AspNetCore.Watch.BrowserRefresh, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'Microsoft.AspNetCore.Watch.BrowserRefresh, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.ExecuteHostingStartups()
+
+
+   --- End of inner exception stack trace ---
+2022-11-27T15:43:54.8184628+01:00  [FTL] Hosting startup assembly exception (37a7eec1)
+System.InvalidOperationException: Startup assembly Microsoft.WebTools.BrowserLink.Net failed to execute. See the inner exception for more details.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.WebTools.BrowserLink.Net, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'Microsoft.WebTools.BrowserLink.Net, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.ExecuteHostingStartups()
+
+
+   --- End of inner exception stack trace ---
+2022-11-27T15:43:54.8208506+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-27T15:43:54.8237647+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-27T15:43:54.8253068+01:00  [INF] Content root path: "C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2" (b5d60022)
+2022-11-27T15:44:41.3473689+01:00  [FTL] Hosting startup assembly exception (37a7eec1)
+System.InvalidOperationException: Startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh failed to execute. See the inner exception for more details.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.AspNetCore.Watch.BrowserRefresh, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'Microsoft.AspNetCore.Watch.BrowserRefresh, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.ExecuteHostingStartups()
+
+
+   --- End of inner exception stack trace ---
+2022-11-27T15:44:41.3544128+01:00  [FTL] Hosting startup assembly exception (37a7eec1)
+System.InvalidOperationException: Startup assembly Microsoft.WebTools.BrowserLink.Net failed to execute. See the inner exception for more details.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.WebTools.BrowserLink.Net, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'Microsoft.WebTools.BrowserLink.Net, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.ExecuteHostingStartups()
+
+
+   --- End of inner exception stack trace ---
+2022-11-27T15:44:41.3567790+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-27T15:44:41.3633086+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-27T15:44:41.3646034+01:00  [INF] Content root path: "C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2" (b5d60022)
+2022-11-27T15:45:51.8456740+01:00  [FTL] Hosting startup assembly exception (37a7eec1)
+System.InvalidOperationException: Startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh failed to execute. See the inner exception for more details.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.AspNetCore.Watch.BrowserRefresh, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'Microsoft.AspNetCore.Watch.BrowserRefresh, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.ExecuteHostingStartups()
+
+
+   --- End of inner exception stack trace ---
+2022-11-27T15:45:51.8527817+01:00  [FTL] Hosting startup assembly exception (37a7eec1)
+System.InvalidOperationException: Startup assembly Microsoft.WebTools.BrowserLink.Net failed to execute. See the inner exception for more details.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.WebTools.BrowserLink.Net, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'Microsoft.WebTools.BrowserLink.Net, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.ExecuteHostingStartups()
+
+
+   --- End of inner exception stack trace ---
+2022-11-27T15:45:51.8544852+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-11-27T15:45:51.8566194+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-11-27T15:45:51.8579541+01:00  [INF] Content root path: "C:\Users\imadf\Documents\Stock-trading-2\Stock-trading-2" (b5d60022)
