@@ -5,7 +5,15 @@
 function hentAlleAksjer() {
     $.get("aksje/hentAlle", function (aksjer) {
         formaterAksjer(aksjer)
-    });
+    })
+    .fail(function (feil) {
+        if (feil.status == 401) {
+            window.location.href = "loggInn.html";
+        }
+        else {
+            $("#feil").html("Feil på server - Prøv igjen senere!");
+        }
+    })
 }
 
 function formaterAksjer(aksjer) {

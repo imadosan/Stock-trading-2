@@ -22,6 +22,14 @@ namespace Stock_trading_2
             services.AddControllers();
             services.AddDbContext<AksjeContext>(options => options.UseSqlite("Data source=Aksje.db"));
             services.AddScoped<IAksjeRepository, AksjeRepository>();
+            services.AddSession(options =>
+            {
+                options.Cookie.Name = ".AdventureWorks.Session";
+                options.IdleTimeout = TimeSpan.FromSeconds(1800); // 30 minutter
+                options.Cookie.IsEssential = true;
+            });
+
+            services.AddDistributedMemoryCache();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,6 +43,8 @@ namespace Stock_trading_2
             }
 
             app.UseRouting();
+
+            app.UseSession();
 
             app.UseStaticFiles();
 
